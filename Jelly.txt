@@ -1,0 +1,423 @@
+### File header must not be modified
+### This file must be encoded into UTF-8.
+### This table under LGPL
+### comments start with ### not single #
+### Derive from the format of SCIM Table, so you can modify the table from
+### scim-tables' table
+SCIM_Generic_Table_Phrase_Library_TEXT
+VERSION_1_0
+
+### Begin Table definition.
+BEGIN_DEFINITION
+
+### License
+LICENSE = LGPL
+
+### An unique id to distinguish this table among others.
+### Use uuidgen to generate this kind of id.
+UUID = 021c6248-0982-4853-8a21-1c98a4501137
+
+### A unique number indicates the version of this file.
+### For example the last modified date of this file.
+### This number must be less than 2^32.
+### Just make your table version-able
+SERIAL_NUMBER = 20160223
+
+### ICON can be any format as long as your pygtk can recognized
+### the most widely ones are "png" and "svg", latter one is recommended
+### ICON = ibus-table.svg ###TODO
+
+### The symbol to be displayed in IM switchers
+SYMBOL = ლ
+
+### The default name of this table, this is needed
+NAME = Jelly
+
+### Description
+DESCRIPTION = This is a table of emoticon faces.
+
+### Supported languages of this table
+### single "zh_CN" just be recognized as zh_CN,
+### but "zh_CN, zh_HK" or more zh_XX will be recognized as zh;
+### and "en_US, zh_CN" will be just ignored.
+### LANGUAGES = zh_CN,zh_SG,zh_TW,zh_HK
+
+### The author of this table
+AUTHOR = somebody
+
+### Prompt string to be displayed in the status area, CN will be replaced by
+### the gettext tools in runtime as 中.
+STATUS_PROMPT = FC
+
+### Valid input chars.
+VALID_INPUT_CHARS = abcdefghijklmnopqrstuvwxyz!@#$%^&*(),./<>?;':"[]\{}|-_+`~
+
+### Layout
+LAYOUT = us
+
+### The max number of input keys for every phrase or character.
+MAX_KEY_LENGTH = 5
+
+### Use auto_commit mode as default
+AUTO_COMMIT = FALSE
+
+### Automatically selects the first phrase when typing
+AUTO_SELECT = FALSE
+
+### Use full width punctuation by default
+DEF_FULL_WIDTH_PUNCT = FALSE
+### Not use full width letter by default
+DEF_FULL_WIDTH_LETTER = FALSE
+
+### Whether user are allow to define phrase, default is true
+### You have to define the word construction rules below.
+### For input methods which do not input phrases, set this to False
+USER_CAN_DEFINE_PHRASE = TRUE
+
+### Whether support PinYin Mode, default is true.
+### this feature is just for Chinese, set it to False if your IM is not
+### Chinese.
+PINYIN_MODE = FALSE
+
+### If true then the phrases' frequencies will be adjusted dynamically
+### according your using frequency.
+DYNAMIC_ADJUST = TRUE 
+
+### Some characters whose frequencies should be fix all the time, e.g. 
+### some punctuations
+### NO_CHECK_CHARS = 
+
+### Rules for constructing user defined phrase
+### "ce" stands for "ci equal", a Chinese English :), means "phrase length
+### equal to", thus ce2 -> phrase length equal to 2; and "ca" means "phrase
+### length equal or above", so ca4 -> phrase length equal or above 4.
+### p21 -> the 1st key of 2nd character in the phrase, and so on.
+### Each rule separate via ";". 
+### Example below is a complete rule-set, 
+### becuase [2,2] ∩ [3,3] ∩ [4,+∞] = [2,+∞], which is the range of length
+### of phrase. This have to be satisfied if you need ibus-table to build up
+### your own inputed phrase via your daily using.
+RULES = ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+
+### The key strokes to page up the lookup table.
+### PAGE_UP_KEYS = Page_Up,KP_Page_Up,minus,comma
+
+### The key strokes to page down.
+### PAGE_DOWN_KEYS = Page_Down,KP_Page_Down,equal,period
+
+END_DEFINITION
+
+### Begin Table data.
+### Format of every line whose formated in "input_keys\tphrase\tfreq\n" is an
+### entry.
+### From left to right, the 1st column are the input key combination that you
+### entered via keyboard; the 2nd column are presented character or phrase of
+### the key combination you want; the 3rd column are frequency of the character
+### or phrase.
+BEGIN_TABLE
+logicalnot	¬	1
+notlogical	¬	1
+!=	¬	1
+restore	®	1
+root	½	1
+sqrt	½	1
+multiply	×	1
+*	×	1
+times	×	1
+divide	÷	1
+/	÷	1
+factorial	!	1
+pi	!	1
+!	!	1
+modulus	%	1
+%	%	1
+andbitwise	&	1
+bitwiseand	&	1
+&	&	1
+power	*	1
+exponent	*	1
+modulus	%	1
+add	+	1
+plus	+	1
++	+	1
+pair	,	1
+intdivide	:	1
+divideint	:	1
+concatenate	;	1
+lessthan	<	1
+equals	=	1
+morethan	>	1
+greatherthan	>	1
+absolute	A	1
+inttobinary	B	1
+binary	B	1
+complement	C	1
+oneminus	C	1
+inttodecimal	D	1
+integertogecimal	D	1
+decimal	D	1
+flatten	F	1
+halve	H	1
+increment	I	1
+difference	I	1
+delta	I	1
+length	L	1
+maxindices	M	1
+negative	N	1
+ordinal	O	1
+casttonumber	O	1
+tonumber	O	1
+number	O	1
+product	P	1
+rangeinclusivemonadic	R	1
+inclusiverangemonadic	R	1
+monadicinclusiverange	R	1
+listsum	S	1
+truthyindices	T	1
+upend	U	1
+reverse	U	1
+eval	V	1
+wrap	W	1
+listwrap	W	1
+ziptuple	Z	1
+tuplezip	Z	1
+xorbitwise	^	1
+bitwisexor	^	1
+^	^	1
+subract	_	1
+minus	_	1
+-	_	1
+andlogicalvector	a	1
+logicalandvector	a	1
+&&vector	a	1
+base	b	1
+tobase	b	1
+inttobase	b	1
+integertobase	b	1
+combination	c	1
+divmod	d	1
+exists	e	1
+in	e	1
+inboth	f	1
+union	f	1
+filterin	f	1
+filterboth	f	1
+greatestcommondivisor	g	1
+gcd	g	1
+findindex	i	1
+joinusing	j	1
+logarithm	l	1
+modular	m	1
+::	m	1
+logicalorvector	o	1
+orlogicalvector	o	1
+||vector	o	1
+cartesianproduct	p	1
+inclusiverangedyadic	r	1
+rangeinclusivedyadic	r	1
+dyadicinclusiverange	r	1
+splitrepeating	s	1
+repeatingsplit	s	1
+splitafter	s	1
+splitevery	s	1
+trim	t	1
+times	x	1
+repeat	x	1
+ziptranspose	z	1
+transposezip	z	1
+orbitwise	|	1
+|	|	1
+bitwisenot	~	1
+~	~	1
+degreestoradians	°	1
+degtorad	°	1
+radian	°	1
+identity	¹	1
+noop	¹	1
+square	²	1
+inputone	³	1
+inputtwo	⁴	1
+inputthree	⁵	1
+inputfour	⁶	1
+inputfive	⁷	1
+twofivesix	³	1
+onesix	⁴	1
+onezero	⁵	1
+space	⁶	1
+twofiftysix	³	1
+twohundredfiftysix	³	1
+twohundredandfiftysix	³	1
+sixteen	⁴	1
+ten	⁵	1
+space	⁶	1
+newline	⁷	1
+linebreak	⁷	1
+br	⁷	1
+evalline	Ɠ	1
+readchar	ƈ	1
+readline	ɠ	1
+binarytointeger	Ḅ	1
+bintointeger	Ḅ	1
+decimaltinteger	Ḍ	1
+dectointeger	Ḍ	1
+double	Ḥ	1
+minimum	Ṃ	1
+character	Ọ	1
+sort	Ṣ	1
+makeindicestrue	Ṭ	1
+maketrue	Ṭ	1
+gradeup	Ụ	1
+bit	Ḃ	1
+odd	Ḃ	1
+ceiling	Ċ	1
+roundup	Ċ	1
+dequeue	Ḋ	1
+enumerate	Ė	1
+floor	Ḟ	1
+rounddown	Ḟ	1
+headsingle	Ḣ	1
+beheadsingle	Ḣ	1
+popofflast	Ḣ	1
+inverse	İ	1
+maximum	Ṁ	1
+printwithnewline	Ṅ	1
+print	Ȯ	1
+pop	Ṗ	1
+unique	Q	1
+sign	Ṡ	1
+tailsingle	Ṫ	1
+betailsingle	Ṫ	1
+popofffirst	Ṫ	1
+absolutedifference	ạ	1
+differenceabsolute	ạ	1
+unbase	ḅ	1
+debase	ḅ	1
+basetointeger	ḅ	1
+isfactor	ḍ	1
+isdivisible	ḍ	1
+atindex	ị	1
+left	ḷ	1
+right	ṛ	1
+split	ṣ	1
+splitat	ṣ	1
+logicalandflat	ȧ	1
+andlogicalfat	ȧ	1
+&&flat	ȧ	1
+count	ċ	1
+innone	ḟ	1
+filterout	ḟ	1
+filternone	ḟ	1
+headmultiple	ḣ	1
+multiplehead	ḣ	1
+logicalorflat	ȯ	1
+orlogicalflat	ȯ	1
+||flat	ȯ	1
+cartesianpower	ṗ	1
+rotateleft	ṙ	1
+overlappingslice	ṡ	1
+sliceoverlapping	ṡ	1
+tailmultiple	ṫ	1
+repeatlist	ẋ	1
+zipinterleave	ż	1
+interleavezip	ż	1
+minimumdyadic	«	1
+maximumdyadic	»	1
+increment	‘	1
+decrement	’	1
+pi	ØP	1
+euler	Øe	1
+introot	Æ½	1
+integerroot	Æ½	1
+intrsqrt	Æ½	1
+integersqrt	Æ½	1
+arccosine	ÆA	1
+numprimesless	ÆC	1
+numberprimesless	ÆC	1
+numsmallerprimes	ÆC	1
+numbersmallerprimes	ÆC	1
+divisors	ÆD	1
+primeexponents	ÆE	1
+factorise	ÆF	1
+nthprime	ÆN	1
+isprime	ÆP	1
+range	ÆR	1
+sine	ÆS	1
+tangent	ÆT	1
+exponential	Æe	1
+primefactors	Æf	1
+ln	Æl	1
+naturallogarithm	Æl	1
+nextprime	Æn	1
+previousprime	Æp	1
+prevprime	Æp	1
+polynomialroots	Ær	1
+polyroots	Ær	1
+cosine	ÆẠ	1
+inverseexponents	ÆẸ	1
+arcsine	ÆṢ	1
+arctangent	ÆṬ	1
+totient	ÆṪ	1
+polyfromroots	Ær	1
+radianstodegrees	Æ°	1
+radtodegrees	Æ°	1
+degrees	Æ°	1
+issquare	Æ²	1
+symmetricmodulus	Æ²	1
+symmmodulus	æ%	1
+symmodulus	æ%	1
+symodulus	æ%	1
+atan2	æA	1
+arctangentcoordinate	æA	1
+roundtopoweroften	ær	1
+loground	ær	1
+roundlog	ær	1
+sf	æp	1
+sigfig	æp	1
+significantfigures	æp	1
+ceilpower	æċ	1
+floorpower	æḟ	1
+allpermutations	Œ!	1
+lowercase	Œl	1
+swapcase	Œs	1
+titlecase	Œt	1
+firstcase	Œt	1
+uppercase	Œu	1
+powerset	ŒP	1
+listcartesianproduct	Œp	1
+arraycartesianproduct	Œp	1
+depth	ŒḊ	1
+string	ŒṘ	1
+combinationswithoutreplacement	œc	1
+combinationsnoreplacement	œc	1
+trimleft	œl	1
+trimright	œr	1
+multisetintersection	œ&	1
+multisetunion	œ&	1
+multiintersection	œ&	1
+multiunion	œ&	1
+multisetdifference	œ-	1
+multidifference	œ-	1
+multisetsymmetricdifference	œ^	1
+multisetsymmdifference	œ^	1
+multisetsymdifference	œ^	1
+multisymmetricdifference	œ^	1
+multisymmdifference	œ^	1
+multisymdifference	œ^	1
+multisetunion	œ|	1
+multiunion	œ|	1
+END_TABLE
+###		1 ### template
+
+### Since some input methods use different table for every character to make
+### phrase, such as ZhengMa, they need explict define the goucima (the
+### phrase-building code for the given character), the format of every entry is
+### "character\tgoucima\n". 
+### For the input method which just use the full code as word-building code
+### just skip this field. The ibus-table will build the codes needed from
+### above TABLE.
+### if you don't need different word-building code, please comment out the
+### next few lines with ###, just like these lines you are look at now.
+### BEGIN_GOUCI
+### character_1	goucima_1
+### character_1	goucima_2
+### END_GOUCI
